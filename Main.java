@@ -5,11 +5,11 @@
 //size: returns size of the list O(1)
 //getFirst/getLast: gets the first or last element
 //delete : delete a node in the list given that node (a pointer to the node you want to delete)
+class Node{
+  int data;
+  Node next;
+}
 class LinkedList{
-  class Node{
-    int data;
-    Node next;
-  }
 
   Node head;
   Node tail;
@@ -76,7 +76,18 @@ class LinkedList{
 }
 class Main {
 
-
+//2. Merge Sorted LinkedLists: Given two sorted linked lists, write a function that returns a linked list (the head node) containing the elements of the two lists merged in sorted order. 
+public Node mergeSortedLinkedLists(LinkedList listOne, LinkedList listTwo){
+  Node head = (listOne.head.data > listTwo.head.data) ? listTwo.head : listOne.head;
+  Node curListOneNode = listOne.head;
+  Node curListTwoNode = listTwo.head;
+  Node curNode = (listOne.head.data > listTwo.head.data) ? listTwo.head : listOne.head;
+  Node sucNode = null;
+  while(curListOneNode.next != null && curListTwoNode.next != null){
+    
+  }
+  return head;
+}
 
   public static void main(String[] args) {
     System.out.println("Hello world!");
